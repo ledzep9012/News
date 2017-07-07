@@ -32,7 +32,7 @@ export default class News extends Component {
   }
 
   componentWillMount() {
-    apiNews.getNews().then((newsResponse) => {
+    apiNews.getNews("associated-press").then((newsResponse) => {
       this.setState({
         source: newsResponse.source,
         articles: newsResponse.articles
